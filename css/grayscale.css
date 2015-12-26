@@ -376,6 +376,19 @@ body {
 
 /*My Edits*/
 
-.galleryImg{
+.galleryImg {
   width: 100%;
+  border-radius: 20px;
+  opacity: 0.6;
+  -webkit-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -ms-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+}
+
+.galleryImg:hover {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 1;
 }
