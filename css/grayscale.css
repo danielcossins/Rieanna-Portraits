@@ -375,10 +375,19 @@ body {
 
 
 /*My Edits*/
+  /*overflow: hidden;*/
+.imageRow{
+  /*max-height: 600px;*/
+  /*overflow: hidden;*/
+}
+
+.imageContainter{
+  /*height: 400px*/
+}
 
 .galleryImg {
   width: 100%;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   opacity: 0.6;
   -webkit-transition: opacity .4s ease-in-out;
   -moz-transition: opacity .4s ease-in-out;
