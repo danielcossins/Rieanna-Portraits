@@ -382,13 +382,17 @@ body {
 }
 
 .imageContainter{
+  padding: 0px;
+  /*margin-bottom: 10px;*/
   /*height: 400px*/
 }
 
 .galleryImg {
   width: 100%;
-  /*border-radius: 20px;*/
-  opacity: 0.6;
+  /*box-shadow: 0 0 8px 8px white inset;*/
+  border: 8px solid #FFFFFF;
+  border-radius: 20px;
+  opacity: 0.4;
   -webkit-transition: opacity .4s ease-in-out;
   -moz-transition: opacity .4s ease-in-out;
   -ms-transition: opacity .4s ease-in-out;
