@@ -375,3 +375,11 @@ body {
 
 
 /*My Edits*/
+#gallery{
+  background-color: #4C4C4C;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.galleryImg{
+  width: 100%;
+}
