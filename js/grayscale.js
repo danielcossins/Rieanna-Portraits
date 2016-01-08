@@ -29,3 +29,23 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+$('#send').on("click", function(){
+  postReview();
+});
+
+function postReview(){
+  var review = {
+    name: $('#name').val(),
+    content: $('#content').val(),
+    rating: $('#rating').val()
+  };
+  console.log(review);
+
+  $.ajax({
+    url: "https://rieanna-portraits.firebaseio.com/reviews.json",
+    data: JSON.stringify(review),
+    method: "POST"
+  }).done(function(data){
+    console.log(data);
+  });
+}
