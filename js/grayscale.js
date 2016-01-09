@@ -50,8 +50,9 @@ $.ajax({
     console.log(data[key]);
     html_string += ReviewTemplate(data[key].name, data[key].content, data[key].rating, data[key].date);
   }
-  $('#map').html(html_string);
+  $('#map').html("<div class='review'>" + html_string + "</div>");
   $('#map').append(reviewString);
+  $('#map').prepend("<h2>Reviews</h2>");
 });
 
 function postReview(){
