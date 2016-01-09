@@ -62,8 +62,6 @@ function postReview(){
     rating: $('#rating').val(),
     date: (new Date()).toTimeString()
   };
-  // review.date=new Date(review.date).toUTCString();
-  review.date=review.date.split(' ').slice(0, 4).join(' ');
 
   console.log(review);
 
@@ -73,8 +71,7 @@ function postReview(){
     method: "POST"
   }).done(function(data){
     console.log(data);
-    // $('#review').html(ReviewTemplate(review.name, review.content, review.rating));
-    document.getElementById('review').innerHTML = ReviewTemplate(review.name, review.content, review.rating);
+    $('#review').html(ReviewTemplate(review.name, review.content, review.rating, review.date));
   });
 }
 
