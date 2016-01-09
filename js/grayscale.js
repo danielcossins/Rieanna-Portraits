@@ -90,7 +90,8 @@ function postReview(){
 }
 
 function ReviewTemplate(name, content, rating, date){
-  return "<div class='review' style='color: white;'><h3>" + name + "</h3>" + "<p>" + content + "</p>" + "<p style='color: grey;'>" + date + "</p>" + "</div>";
+  console.log(rating);
+  return "<div class='review' style='color: white;'><h3>" + name + "</h3><h4>Rating: <span style='color: #42dca3;'>" + rating + "</span>" + "</h4>" + "<p>" + content + "</p>" + "<p style='color: grey;'>" + date + "</p>" + "</div>";
 }
 
 function ReturnHTMLMessage(message){
