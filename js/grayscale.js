@@ -62,6 +62,9 @@ function postReview(){
     rating: $('#rating').val(),
     date: (new Date()).toTimeString()
   };
+  // review.date=new Date(review.date).toUTCString();
+  review.date=review.date.split(' ').slice(0, 4).join(' ');
+
   console.log(review);
 
   $.ajax({
@@ -70,10 +73,11 @@ function postReview(){
     method: "POST"
   }).done(function(data){
     console.log(data);
-    $('#review').html(ReviewTemplate(review.name, review.content, review.rating));
+    // $('#review').html(ReviewTemplate(review.name, review.content, review.rating));
+    document.getElementById('review').innerHTML = ReviewTemplate(review.name, review.content, review.rating);
   });
 }
 
 function ReviewTemplate(name, content, rating, date){
-  return "<div class='review' style='color: white;'><h4>" + name + "</h4>" + "<p>" + content + "</p>" + rating + "<p>" + date + "</p>" + "</div>";
+  return "<div class='review' style='color: white;'><h3>" + name + "</h3>" + "<p>" + content + "</p>" + "<p style='font-size: '>" + date + "</p>" + "</div>";
 }
